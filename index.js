@@ -97,6 +97,6 @@ app.get("/movies/genres/:genreName", async (req, res) => {
     res.status(500).json({ error: "Faild to fetch movies." });
   }
 });
-const PORT = 3000;
+const PORT = process.env.PORT || 3000;
 app.listen(PORT, () => console.log("Server is running on", PORT));
 module.exports = app;
